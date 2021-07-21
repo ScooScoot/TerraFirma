@@ -1,0 +1,1 @@
+{"version":3,"file":"Int32.js","sourceRoot":"","sources":["../../src/types/Int32.ts"],"names":[],"mappings":";;AAAA,4BAA4B;AAC5B,MAAM,KAAK;IACV,IAAI,CAAC,MAAc,EAAE,MAAc;QAClC,OAAO,MAAM,CAAC,WAAW,CAAC,MAAM,CAAC,CAAC;IACnC,CAAC;CACD;AACD,IAAI,KAAK,GAAG,IAAI,KAAK,EAAE,CAAC;AACxB,kBAAe,KAAK,CAAC"}

@@ -1,0 +1,11 @@
+{
+	"include": ["src/*", "src/**/*", "getdefs"],
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"moduleResolution": "Node",
+		"module": "commonjs",
+		"target": "ES6",
+		"sourceMap": false,
+		"outDir": "./dist"
+	}
+}

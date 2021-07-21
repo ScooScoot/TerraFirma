@@ -1,0 +1,1 @@
+{"version":3,"file":"ConnectionApproved.js","sourceRoot":"","sources":["../../src/packets/ConnectionApproved.ts"],"names":[],"mappings":";;;;;AAAA,yDAAiC;AACjC,sDAA8B;AAE9B,MAAqB,wBAAyB,SAAQ,gBAAM;IAExD,YAAY,GAAW;QACnB,KAAK,CAAC,GAAG,CAAC,CAAC;QACX,IAAI,CAAC,QAAQ,GAAG,cAAI,CAAC,IAAI,CAAC,IAAI,CAAC,OAAO,EAAE,CAAC,CAAC,CAAC;IAC/C,CAAC;CACJ;AAND,2CAMC"}
