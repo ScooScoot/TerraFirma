@@ -10,18 +10,25 @@ npm install terrafirma
 
 ## Usage
 ```
-terrafirma listeningAddress:listeningPort destinationAddress:destinationPort
+terrafirma -l bindAddress and port -d destinationAddress and port
 ```
 For example:
 ```
-terrafirma 0.0.0.0:1234 localhost:7777
+terrafirma -l 0.0.0.0:1234 -d 127.0.0.1:7777
 ```
+will allow PC clients to join the mobile server running on port 7777 by connecting to port 1234.
 
-Alternatively you can just run
+Alternatively you can just run:
 ```
 terrafirma
 ```
-Which will start the program in the same way as running
+Which will start the program in the same way as running:
 ```
-terrafirma 0.0.0.0:7778 localhost:7777
+terrafirma -l 0.0.0.0:7778 -d 127.0.0.1:7777
 ```
+
+## Problems
+-Pressure plates do not work
+
+## ToDo
+-Add an API
