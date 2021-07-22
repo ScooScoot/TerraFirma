@@ -5,7 +5,7 @@ TerraFirma is a cross-play proxy for Terraria, allowing players using the PC edi
 
 ## Installation
 ```
-npm install terrafirma
+npm install -g terrafirma
 ```
 
 ## Usage
