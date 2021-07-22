@@ -30,17 +30,10 @@ const CliParser_1 = __importDefault(require("./lib/CliParser"));
             "0.0.0.0",
             "7778",
         ];
-        /*let [destinationAddress, destinationPort] = args[0]
-            ? args[0].split(":")
-            : ["127.0.0.1", "7777"];
-        let [listenAddress, listenPort] = args[1]
-            ? args[1].split(":")
-            : ["0.0.0.0", "7778"];
-    */
         let server = new Server_1.default();
-        console.log("Starting Terrarium.");
+        console.log("Starting TerraFirma.");
         yield server.start(parseInt(destinationPort), destinationAddress, parseInt(listenPort), listenAddress);
-        console.log(`Terrarium ready on ${listenAddress}:${listenPort}`);
+        console.log(`TerraFirma ready on ${listenAddress}:${listenPort}`);
         server.on("connection", (client) => {
             console.log(`${client.remoteAddress}:${client.remotePort} connected.`);
             client.on("close", () => {

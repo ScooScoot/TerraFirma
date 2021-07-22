@@ -19,14 +19,14 @@ import CliParser from "./lib/CliParser";
 	];
 
 	let server = new TerrariumServer();
-	console.log("Starting Terrarium.");
+	console.log("Starting TerraFirma.");
 	await server.start(
 		parseInt(destinationPort),
 		destinationAddress,
 		parseInt(listenPort),
 		listenAddress
 	);
-	console.log(`Terrarium ready on ${listenAddress}:${listenPort}`);
+	console.log(`TerraFirma ready on ${listenAddress}:${listenPort}`);
 	server.on("connection", (client) => {
 		console.log(`${client.remoteAddress}:${client.remotePort} connected.`);
 		client.on("close", () => {
