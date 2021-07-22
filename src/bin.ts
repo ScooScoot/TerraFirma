@@ -1,17 +1,22 @@
 #!/usr/bin/env node
 import TerrariumServer from "./lib/Server";
+import CliParser from "./lib/CliParser";
 
 (async function () {
 	let args = process.argv;
 	args.shift();
 	args.shift();
 
-	let [destinationAddress, destinationPort] = args[0]
-		? args[0].split(":")
-		: ["127.0.0.1", "7777"];
-	let [listenAddress, listenPort] = args[1]
-		? args[1].split(":")
-		: ["0.0.0.0", "7778"];
+	let parser = new CliParser(args);
+
+	let [destinationAddress, destinationPort] = parser.get("-d")?.split(":") || [
+		"127.0.0.1",
+		"7777",
+	];
+	let [listenAddress, listenPort] = parser.get("-l")?.split(":") || [
+		"0.0.0.0",
+		"7778",
+	];
 
 	let server = new TerrariumServer();
 	console.log("Starting Terrarium.");
@@ -21,7 +26,7 @@ import TerrariumServer from "./lib/Server";
 		parseInt(listenPort),
 		listenAddress
 	);
-	console.log("Terrarium ready");
+	console.log(`Terrarium ready on ${listenAddress}:${listenPort}`);
 	server.on("connection", (client) => {
 		console.log(`${client.remoteAddress}:${client.remotePort} connected.`);
 		client.on("close", () => {
