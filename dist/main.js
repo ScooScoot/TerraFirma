@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/usr/bin/env node
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -18,16 +18,17 @@ const Server_1 = __importDefault(require("./lib/Server"));
 exports.TerrariumServer = Server_1.default;
 const Client_1 = __importDefault(require("./lib/Client"));
 exports.TerrariumClient = Client_1.default;
+console.log("started");
 if (require.main === module)
     (function () {
         return __awaiter(this, void 0, void 0, function* () {
             let args = process.argv;
             args.shift();
             args.shift();
-            let [destinationAddress, destinationPort] = args[0].split(":");
-            let [listenPort, listenAddress] = args[1]
+            let [destinationAddress, destinationPort] = args[0] ? args[0].split(":") : ["127.0.0.1", "7777"];
+            let [listenAddress, listenPort] = args[1]
                 ? args[1].split(":")
-                : ["7778", "0.0.0.0"];
+                : ["0.0.0.0", "7778"];
             let server = new Server_1.default();
             console.log("Starting Terrarium.");
             yield server.start(parseInt(destinationPort), destinationAddress, parseInt(listenPort), listenAddress);

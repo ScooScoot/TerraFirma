@@ -2,7 +2,7 @@
   "name": "terrafirma",
   "version": "1.0.1",
   "description": "",
-  "main": "dist/main.js",
+  "main": "dist/export.js",
   "scripts": {
     "build": "npx tsc",
     "prepublish": "npm run build"
