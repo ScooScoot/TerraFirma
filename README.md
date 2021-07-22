@@ -10,7 +10,7 @@ npm install terrafirma
 
 ## Usage
 ```
-terrafirma -l bindAddress and port -d destinationAddress and port
+terrafirma -l bindAddressAndPort -d destinationAddressAndPort
 ```
 For example:
 ```
