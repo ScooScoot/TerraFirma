@@ -1,6 +1,6 @@
 import StringType from "../types/StringType";
 import Packet from "./Packet";
-
+//testing adding comments with github.dev
 export default class ConnectRequestPacket extends Packet {
 	version: string;
 	typeKeys = { version: "string" };
